@@ -1,0 +1,126 @@
+/* style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+form, .poll-container {
+  background: #ffffff10;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+input[type="text"], button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  background: #ffffff;
+  color: #000000;
+}
+
+button {
+  background-color: #ff6a00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8800;
+}
+
+.poll-list, .results-list {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.poll-item, .result-item {
+  background: #ffffff10;
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.poll-item:hover {
+  background-color: #ffffff20;
+  cursor: pointer;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Enhancements added below --- */
+
+/* Style for vote buttons inside poll items */
+.poll-item button {
+  margin-top: 8px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.poll-item button:hover {
+  background-color: #ff8800;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 500px) {
+  form, .poll-container {
+    padding: 16px;
+  }
+
+  input[type="text"], button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional future styling for result bars */
+.result-bar {
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 4px;
+  margin-top: 4px;
+}

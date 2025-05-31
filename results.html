@@ -1,0 +1,21 @@
+<!-- client/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poll Results - QuickPollz</title>
+  <link rel="stylesheet" href="QP.css">
+</head>
+<body>
+  <h1>Poll Results</h1>
+  <div id="results-container"></div>
+  <a href="index.html">Back to Polls</a>
+
+  <script src="script.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const pollId = urlParams.get('id');
+    loadResults(pollId);
+  </script>
+</body>
+</html>
